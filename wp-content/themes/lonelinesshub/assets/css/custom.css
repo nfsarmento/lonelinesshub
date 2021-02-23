@@ -1,0 +1,627 @@
+/*--------------------------------------------------------------
+This is your custom stylesheet.
+
+Add your own styles here to make theme updates easier.
+To override any styles from other stylesheets, simply copy them into here and edit away.
+
+Make sure to respect the media queries! Otherwise you may
+accidentally add desktop styles to the mobile layout.
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+--------------------------------------------------------------*/
+
+/*
+*
+* 1 - Elements
+* 2 - Navbar
+* 3 - Pages
+* 4 - Plugins
+* 5 - Pages
+* 6 - Posts
+* 7 - Footer
+* 8 - Custom grid
+*
+*
+*
+* **/
+
+
+/** Elements **/
+
+a.button.small.outline.signin-button.link {
+    background: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 10px 20px 10px 20px;
+}
+
+.site-content a {
+  text-decoration: underline !important;
+  text-underline-position: under;
+}
+
+a.button.full.btn-new-topic,
+a.send-message,
+div#user_switching_switch_to a {
+  color: #fff !important;
+}
+
+.site-content i {
+  text-decoration: none !important;
+}
+
+.site-content a:focus,
+.site-content input[type="search"]:focus,
+.site-content input[type="search"]:focus {
+  outline: 3px solid transparent !important;
+  background-color: #fd0 !important;
+  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c !important;
+  text-decoration: none !important;
+}
+
+
+.widget-title {
+  font-size: 0.85rem;
+}
+
+.follow-button {
+  text-decoration: underline !important;
+}
+
+.bb-icon-mail-small:before {
+  content: '\e839';
+  color: #175892;
+}
+
+.activity-list .activity-item .activity-header {
+  font-size: 16px;
+  letter-spacing: -.24px;
+  margin: 0;
+  width: auto;
+}
+
+.site-content {
+    background: #f9f9f9;
+}
+
+.widget {
+    border-bottom: 5px solid #9DD7FC !important;
+}
+
+input#dir-activity-search {
+    text-decoration: none !important;
+}
+
+a.item-button,
+a.button.acomment-reply,
+a.button.fav.bp-secondary-action,
+p.activity-date a,
+input.search-field-top{
+    text-decoration: none !important;
+}
+
+/** NavBar **/
+.buddypress-wrap .bp-subnavs li.current a,
+.buddypress-wrap .bp-subnavs li.selected a,
+nav#object-nav .selected>a,
+.elementor-widget-wrap div.item-options .selected, .widget.buddypress div.item-options .selected {
+  border-bottom: unset;
+}
+
+.primary-menu>.current-menu-parent>a,
+.primary-menu>.current-menu-ancestor>a,
+.primary-menu>.current-menu-item>a,
+.primary-menu .current_page_item>a,
+.primary-menu>.current-menu-parent>a:hover,
+.primary-menu>.current-menu-ancestor>a:hover,
+.primary-menu>.current-menu-item>a:hover,
+.primary-menu .current_page_item>a:hover,
+.primary-menu .current-menu-item>a>i,
+.primary-menu .current-menu-item>a:hover>i,
+.site-header .sub-menu .current-menu-parent>a,
+.site-header .sub-menu .current-menu-ancestor>a {
+  text-decoration: underline !important;
+  text-underline-position: under;
+}
+
+.site-header .sub-menu a {
+	color: #000000 !important;
+}
+
+/** Plugins **/
+input#post{
+	color: #ffffff !important;
+	padding: 16px !important;
+	background-color: #000000 !important;
+	line-height: 7px !important;
+}
+
+input {
+	text-decoration: underline !important;
+	text-underline-position: under;
+}
+
+/* Calendar plugin */
+.tribe_community_edit .button-primary,
+.tribe_community_edit .tribe-button.tribe-button-primary,
+.tribe_community_list .button-primary,
+.tribe_community_list .tribe-button.tribe-button-primary {
+  background: #000000;
+  color: #fff !important;
+}
+
+.tribe-button.tribe-button-secondary,
+.tribe-button.tribe-button-primary.add-new{
+    color: #ffffff !important;
+    padding: 16px !important;
+    background-color: #000000 !important;
+}
+
+.tribe-community-events-content .tribe-nav .my-events-display-options a {
+    padding: 15px 20px !important;
+}
+
+.tribe-search-form input[type="search"],
+input#group-document-search{
+    text-decoration: none !important;
+}
+
+.tribe-button.tribe-button-secondary:hover,
+.events-community-submit:hover{
+    color: #fff !important;
+    padding: 16px !important;
+}
+
+a.table-menu-btn.button.tribe-button.tribe-button-tertiary.tribe-button-activate {
+    line-height: 22px !important;
+}
+
+.events-community-submit {
+    background-color: #1d70b8 !important;
+    color: #fff !important;
+    font-weight: 400;
+    margin: 30px auto;
+    min-width: 150px;
+    padding: 1em;
+    width: 20% !important;
+    line-height: 9px !important;
+    text-decoration: underline !important;
+	text-underline-position: under;
+	font-family: inherit !important;
+}
+
+/* Most Viewd shortcode */
+.mostviewed-widget {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.mostviewed-widget .rs-post-image-widget a img {
+    max-width: 50px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 12px;
+}
+
+.mostviewed-widget .rs-post-title {
+    margin-bottom: 5px;
+}
+
+.mostviewed-widget .rs-post-counter-widget {
+    font-size: 12px;
+}
+
+/** Pages **/
+.home .wp-block-cover__inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    line-height: 70px;
+    margin-left: 8px;
+}
+
+.home .uagb-post-grid .uagb-post__columns-3 article {
+    width: 100%;
+}
+
+.home .bbp_widget_login form.bbp-login-form {
+    width: 100%;
+    padding: 20px;
+}
+
+
+.home .bbp_widget_login .widget-title {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 27px;
+    margin-top: 20px;
+}
+
+.home .bbp-username label,
+.home .bbp-password label{
+    color: #017AB3;
+    font-weight: 700;
+}
+
+.home .bbp_widget_login input[type=password], 
+.home .bbp_widget_login input[type=text] {
+    width: 100%;
+    height: 45px;
+    padding-left: 35px;
+}
+
+.home .bbp_widget_login .bbp-submit-wrapper button.bp-login-btn-active {
+    background: #000000;
+    font-size: 16px;
+    margin-top: 51px;
+    text-decoration: underline;
+    font-weight: 600;
+	height: 38px;
+}
+
+.home .bbp_widget_login .bbp-submit-wrapper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    float: unset;
+}
+
+.home aside#bbp_login_widget-2 {
+    min-height: 480px;
+	border-color: #fff;
+}
+
+
+@media only screen and (max-width: 600px) {
+.home h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    line-height: 50px;
+    margin-left: 8px;
+}
+}
+
+/** Posts **/
+
+.blog .site-content .bb-grid>* {
+    -webkit-box-flex: 50%;
+    -ms-flex: 50%;
+    flex: 50%;
+    min-width: 1px;
+    list-style: none;
+}
+
+.blog .first .post-inner-wrap {
+    display: flex;
+    flex-flow: unset;
+    flex-direction: column;
+}
+
+.blog .post-grid .first .ratio-wrap {
+    width: 100%;
+}
+
+
+.blog .first .post-inner-wrap .entry-title {
+    font-size: 1.25rem;
+    color: #122b46;
+    letter-spacing: -.24px;
+    line-height: 1.31;
+    margin: 0;
+    word-break: break-word;
+}
+
+.blog .first .post-inner-wrap .entry-content-wrap {
+    padding: 25px 30px 30px;
+}
+
+.blog .post-grid .first .ratio-wrap .entry-img {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 52.56%;
+    display: block;
+    background: #809ab4;
+}
+
+@media only screen and (max-width: 768px) {
+	.blog .bb-grid-cell, .bb-grid>* {
+		-webkit-box-flex: 100%;
+		    -ms-flex: 100%;
+		        flex: 100%;
+		min-width: 100%;
+		list-style: none;
+	}	
+}
+
+
+.post-type-archive-resources .row-resources {
+    margin-top: 23px;
+}
+
+.post-type-archive-resources .col-6 {
+    margin-bottom: 25px !important;
+}
+
+.post-type-archive-resources .bb-user-avatar-wrap {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post-type-archive-resources header.entry-header {
+    padding: 0px 25px 0px 25px;
+}
+
+.post-type-archive-resources .entry-meta {
+    padding: 0px 25px 25px 25px;
+}
+
+.post-type-archive-resources h2.entry-title {
+    font-size: 20px;
+    margin-top: 25px;	
+}
+
+.post-type-archive-resources span.facetwp-counter {
+    display: none;
+}
+
+.post-type-archive-resources .entry-content-wrap {
+    padding: 0;
+}
+
+
+
+.row-shortcode-cpt .rs-post-image {
+	border-bottom: 10px solid #9DD7FC;
+    margin-bottom: 20px;
+    height: 185px;
+}
+
+.rs-post-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+}
+
+.row-shortcode-cpt a.rs-post-title-url,
+a.rs-post-excerpt-url{
+    text-decoration: none !important;
+}
+
+.row-shortcode-cpt p.rs-post-date {
+    color: #777777;
+	margin-bottom: 10px;
+}
+
+.row-shortcode-cpt p.rs-post-title {
+    font-size: 26px;
+	margin-bottom: 20px;
+}
+
+.single aside#text-8,
+.single aside#text-5 {
+  display:none;
+}
+
+
+/** Footer **/
+.footer-widget-area {
+    background-color: #efecec !important;
+}
+
+.footer-widget-area {
+    padding-top: 90px !important;
+	padding-bottom: 70px !important;
+    border-top: 10px solid #9DD7FC;
+}
+
+.footer-widget .widget {
+    border-bottom: none !important;
+}
+
+img.alignnone.size-full.wp-image-239 {
+    max-width: 48%;
+}
+img.alignnone.size-full.wp-image-240 {
+    max-width: 72%;
+}
+img.alignnone.size-full.wp-image-241 {
+    max-width: 60%;
+}
+
+.bb-footer .widget ul li a, .bb-footer li a, .bb-footer .widget_nav_menu .sub-menu a {
+    color: #000000 !important;
+    font-size: 14px !important;
+    text-decoration: underline !important;
+}
+
+@media only screen and (max-width: 600px) {
+img.alignnone.size-full.wp-image-239,
+img.alignnone.size-full.wp-image-240,
+img.alignnone.size-full.wp-image-241{
+    max-width: 40% !important;
+}
+}
+
+
+
+/* ==== GRID SYSTEM ==== */
+
+.container {
+/*   width: 90%;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.col-1-sm {
+  width: 4.33%;
+}
+
+.col-2-sm {
+  width: 12.66%;
+}
+
+.col-3-sm {
+  width: 21%;
+}
+
+.col-4-sm {
+  width: 29.33%;
+}
+
+.col-5-sm {
+  width: 37.66%;
+}
+
+.col-6-sm {
+  width: 46%;
+}
+
+.col-7-sm {
+  width: 54.33%;
+}
+
+.col-8-sm {
+  width: 62.66%;
+}
+
+.col-9-sm {
+  width: 71%;
+}
+
+.col-10-sm {
+  width: 79.33%;
+}
+
+.col-11-sm {
+  width: 87.66%;
+}
+
+.col-12-sm {
+  width: 96%;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+@media only screen and (min-width: 33.75em) {  /* 540px */
+/*   .container {
+    width: 80%;
+  } */
+}
+
+@media only screen and (min-width: 45em) {  /* 720px */
+  .col-1 {
+    width: 4.33%;
+  }
+
+  .col-2 {
+    width: 12.66%;
+  }
+
+  .col-3 {
+    width: 21%;
+  }
+
+  .col-4 {
+    width: 29.33%;
+  }
+
+  .col-5 {
+    width: 37.66%;
+  }
+
+  .col-6 {
+    width: 46%;
+  }
+
+  .col-7 {
+    width: 54.33%;
+  }
+
+  .col-8 {
+    width: 62.66%;
+  }
+
+  .col-9 {
+    width: 71%;
+  }
+
+  .col-10 {
+    width: 79.33%;
+  }
+
+  .col-11 {
+    width: 87.66%;
+  }
+
+  .col-12 {
+    width: 96%;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 60em) { /* 960px */
+/*   .container {
+    width: 75%;
+    max-width: 60rem;
+  } */
+}

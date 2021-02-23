@@ -1,0 +1,28 @@
+.login h1 {
+  background-image:url(/wp-content/uploads/2021/02/hub-logo.png) !important;
+  width: 320px !important;
+  background-size: 310px !important;
+  height: 150px;
+  background-repeat: no-repeat;
+}
+
+.login h1 span{
+  display:none;
+}
+
+body{
+    background: #ffffff !important;
+}
+
+.wp-core-ui .button-primary {
+    background: #000 !important;
+    border-color: #000 !important;
+}
+
+a.privacy-policy-link {
+  color: #000 !important;
+}
+
+p#backtoblog {
+    display: block !important;
+}
