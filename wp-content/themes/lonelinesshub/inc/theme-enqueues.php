@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Enqueue scripts and styles.
  */
-function buddyboss_theme_child_languages()
+function lonelinesshub_theme_child_languages()
 {
   /**
    * Makes child theme available for translation.
@@ -28,14 +28,14 @@ function buddyboss_theme_child_languages()
   // load_theme_textdomain( 'buddyboss-theme-child', get_stylesheet_directory() . '/languages' );
 
 }
-add_action( 'after_setup_theme', 'buddyboss_theme_child_languages' );
+add_action( 'after_setup_theme', 'lonelinesshub_theme_child_languages' );
 
 /**
  * Enqueues scripts and styles for child theme front-end.
  *
  * @since Boss Child Theme  1.0.0
  */
-function buddyboss_theme_child_scripts_styles()
+function lonelinesshub_theme_child_scripts_styles()
 {
   /**
    * Scripts and Styles loaded by the parent theme can be unloaded if needed
@@ -47,9 +47,9 @@ function buddyboss_theme_child_scripts_styles()
    **/
 
   // Styles
-  wp_enqueue_style( 'buddyboss-child-css', get_stylesheet_directory_uri().'/assets/css/custom.css', '', '1.0.3' );
+  wp_enqueue_style( 'lonelinesshub-css', get_stylesheet_directory_uri().'/assets/css/custom.css', '', '1.0.3' );
 
   // Javascript
-  wp_enqueue_script( 'buddyboss-child-js', get_stylesheet_directory_uri().'/assets/js/custom.js', '', '1.0.2' );
+  wp_enqueue_script( 'lonelinesshub-js', get_stylesheet_directory_uri().'/assets/js/custom.js', '', '1.0.2' );
 }
-add_action( 'wp_enqueue_scripts', 'buddyboss_theme_child_scripts_styles', 9999 );
+add_action( 'wp_enqueue_scripts', 'lonelinesshub_theme_child_scripts_styles', 9999 );
