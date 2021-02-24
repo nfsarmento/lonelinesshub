@@ -287,7 +287,7 @@ div#header-notifications-dropdown-elem .notification-link {
 
 span.msg-icon,
 span.notification-icon {
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 a.header-search-link {
@@ -328,46 +328,17 @@ a.header-search-link {
   width: 100%;
 }
 
-.home .bbp_widget_login form.bbp-login-form {
-  width: 100%;
-  padding: 20px;
-}
-
-.home .bbp_widget_login .widget-title {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  text-align: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 27px;
-  margin-top: 20px;
-}
-
-.home .bbp-username label,
-.home .bbp-password label {
-  color: #017AB3;
-  font-weight: 700;
-}
-
-.home .bbp_widget_login input[type=password],
-.home .bbp_widget_login input[type=text] {
-  width: 100%;
-  height: 45px;
-  padding-left: 35px;
-}
-
-.home .bbp_widget_login .bbp-submit-wrapper button.bp-login-btn-active {
-  background: #000000;
-  font-size: 16px;
-  margin-top: 51px;
-  text-decoration: underline;
-  font-weight: 600;
-  height: 38px;
+.home #bbp_login_widget-2 .bbp-logged-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .home .bbp_widget_login .bbp-submit-wrapper {
@@ -387,6 +358,59 @@ a.header-search-link {
 .home aside#bbp_login_widget-2 {
   min-height: 480px;
   border-color: #fff;
+}
+
+.home .bbp_widget_login form.bbp-login-form {
+  width: 100%;
+  padding: 20px;
+}
+
+.home .bbp_widget_login .widget-title {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 33px;
+  margin-top: 45px;
+}
+
+.home #bbp_login_widget-2 img.avatar.avatar-40.photo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.home #bbp_login_widget-2 h4{
+	margin-bottom: 20px;
+}
+
+.home .bbp-username label,
+.home .bbp-password label {
+  color: #017AB3;
+  font-weight: 700;
+}
+
+.home .bbp_widget_login input[type=password],
+.home .bbp_widget_login input[type=text] {
+  width: 100%;
+  height: 45px;
+  padding-left: 35px;
+}
+
+.home .bbp_widget_login .bbp-submit-wrapper button.bp-login-btn-active {
+  background: #000000;
+  font-size: 16px;
+  margin-top: 14px;
+  font-weight: 600;
+  height: 38px;
+  min-width: 120px;
+  text-decoration: underline !important;
+  text-underline-position: under;	
 }
 
 @media only screen and (max-width: 600px) {
