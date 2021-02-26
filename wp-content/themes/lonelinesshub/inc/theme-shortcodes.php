@@ -45,21 +45,20 @@ function lonelinesshub_cpt_rsource_shortcode( $atts ) {
 		// Loop through posts
 		while ( $custom_query->have_posts() ) {
 
-	   // Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
-	   $custom_query->the_post();
+		  // Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
+		  $custom_query->the_post();
 
-	  // This is the output for your entry so what you want to do for each post.
-	  $output .= '<div class="col-12">';
-      //$output .= '<div class="grid__item_image">' . get_the_post_thumbnail() . '</div>';
-      $output .= '<div class="rs-post-image">';
-      $output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
-      $output .= '</div>';
-      $output .= '<div class="rs-post-content">';
-	  $output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
-      $output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
-      $output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
-      $output .= '</div>';
-      $output .= '</div>';
+		  // This is the output for your entry so what you want to do for each post.
+			$output .= '<div class="col-12">';
+			$output .= '<div class="rs-post-image">';
+			$output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
+			$output .= '</div>';
+			$output .= '<div class="rs-post-content">';
+			$output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
+			$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+			$output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
+			$output .= '</div>';
+			$output .= '</div>';
 
 		}
 
@@ -103,7 +102,7 @@ function lonelinesshub_cpt_rsmv_shortcode( $atts ) {
 	$query_args = array(
 		'post_type'      => 'resources', // Change this to the type of post you want to show
 		'posts_per_page' => $posts_per_page,
-	    'meta_key' => 'popular_posts',
+		'meta_key' => 'popular_posts',
 		'orderby' => 'meta_value_num'
 	);
 
@@ -120,20 +119,19 @@ function lonelinesshub_cpt_rsmv_shortcode( $atts ) {
 		while ( $custom_query->have_posts() ) {
 
 	   // Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
-	   $custom_query->the_post();
+	  $custom_query->the_post();
 
 	  // This is the output for your entry so what you want to do for each post.
 	  $output .= '<div class="col-12">';
-      //$output .= '<div class="grid__item_image">' . get_the_post_thumbnail() . '</div>';
-      $output .= '<div class="rs-post-image">';
-      $output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
-      $output .= '</div>';
-      $output .= '<div class="rs-post-content">';
-	  $output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
-      $output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
-      $output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
-      $output .= '</div>';
-      $output .= '</div>';
+		$output .= '<div class="rs-post-image">';
+		$output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
+		$output .= '</div>';
+		$output .= '<div class="rs-post-content">';
+		$output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
+		$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+		$output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
+		$output .= '</div>';
+		$output .= '</div>';
 
 		}
 
@@ -191,21 +189,20 @@ function lonelinesshub_cpt_latestblog_shortcode( $atts ) {
 		// Loop through posts
 		while ( $custom_query->have_posts() ) {
 
-	   // Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
-	   $custom_query->the_post();
+	  // Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
+	  $custom_query->the_post();
 
 	  // This is the output for your entry so what you want to do for each post.
-	  $output .= '<div class="col-12">';
-      //$output .= '<div class="grid__item_image">' . get_the_post_thumbnail() . '</div>';
-      $output .= '<div class="rs-post-image">';
-      $output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
-      $output .= '</div>';
-      $output .= '<div class="rs-post-content">';
-	  $output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
-      $output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
-      $output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
-      $output .= '</div>';
-      $output .= '</div>';
+		$output .= '<div class="col-12">';
+		$output .= '<div class="rs-post-image">';
+		$output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
+		$output .= '</div>';
+		$output .= '<div class="rs-post-content">';
+		$output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
+		$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+		$output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
+		$output .= '</div>';
+		$output .= '</div>';
 
 		}
 
@@ -263,21 +260,20 @@ function lonelinesshub_cpt_latestevents_shortcode( $atts ) {
 		// Loop through posts
 		while ( $custom_query->have_posts() ) {
 
-	   // Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
-	   $custom_query->the_post();
+			// Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
+			$custom_query->the_post();
 
-	  // This is the output for your entry so what you want to do for each post.
-	  $output .= '<div class="col-12">';
-      //$output .= '<div class="grid__item_image">' . get_the_post_thumbnail() . '</div>';
-      $output .= '<div class="rs-post-image">';
-      $output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
-      $output .= '</div>';
-      $output .= '<div class="rs-post-content">';
-	  $output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
-      $output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
-      $output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
-      $output .= '</div>';
-      $output .= '</div>';
+			// This is the output for your entry so what you want to do for each post.
+			$output .= '<div class="col-12">';
+			$output .= '<div class="rs-post-image">';
+			$output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
+			$output .= '</div>';
+			$output .= '<div class="rs-post-content">';
+			$output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
+			$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+			$output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
+			$output .= '</div>';
+			$output .= '</div>';
 
 		}
 
@@ -295,10 +291,6 @@ function lonelinesshub_cpt_latestevents_shortcode( $atts ) {
 }
 add_shortcode( 'latestevents', 'lonelinesshub_cpt_latestevents_shortcode' );
 // @codingStandardsIgnoreEnd
-
-
-
-
 
 /**
  *
@@ -340,21 +332,20 @@ function lonelinesshub_mostviewd_widget_shortcode( $atts ) {
 		// Loop through posts
 		while ( $custom_query->have_posts() ) {
 
-	   // Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
-	   $custom_query->the_post();
+			// Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
+			$custom_query->the_post();
 
-	  // This is the output for your entry so what you want to do for each post.
-	  $output .= '<div class="col-12 mostviewed-widget">';
-      //$output .= '<div class="grid__item_image">' . get_the_post_thumbnail() . '</div>';
-      $output .= '<div class="rs-post-image-widget">';
-      $output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
-      $output .= '</div>';
-      $output .= '<div class="rs-post-content-widget">';
-      $output .= '<a class="rs-post-title-url-widget" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
-	  $output .= '<p class="rs-post-counter-widget">' .lonelinesshub_get_post_views( get_the_ID() ) .'</p>';
-	  //$output .= '<p class="rs-post-date-widget">'. get_the_date( 'Y-m-d' ) .'</p>';
-      $output .= '</div>';
-      $output .= '</div>';
+			// This is the output for your entry so what you want to do for each post.
+			$output .= '<div class="col-12 mostviewed-widget">';
+			$output .= '<div class="rs-post-image-widget">';
+			$output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
+			$output .= '</div>';
+			$output .= '<div class="rs-post-content-widget">';
+			$output .= '<a class="rs-post-title-url-widget" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+			$output .= '<p class="rs-post-counter-widget">' .lonelinesshub_get_post_views( get_the_ID() ) .'</p>';
+			//$output .= '<p class="rs-post-date-widget">'. get_the_date( 'Y-m-d' ) .'</p>';
+			$output .= '</div>';
+			$output .= '</div>';
 
 		}
 
