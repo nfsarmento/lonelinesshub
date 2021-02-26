@@ -4,7 +4,6 @@
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
 wp-content/*
-!wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
 
@@ -13,6 +12,7 @@ wp-content/plugins/buddyboss-platform-pro/
 wp-content/plugins/facetwp/
 wp-content/plugins/the-events-calendar-community-events/
 wp-content/plugins/worker/
+wp-content/mu-plugins/
 wp-config.php
 
 # ignore specific themes
