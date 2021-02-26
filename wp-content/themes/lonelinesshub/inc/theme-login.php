@@ -61,15 +61,6 @@ function lonelinesshub_lostpassword_redirect( $url ) {
 //add_filter( 'lostpassword_redirect', 'lonelinesshub_lostpassword_redirect', 99 );
 endif;
 
-/**
- * Redirect after successful login
- */
-if ( ! function_exists( 'lonelinesshub_admin_default_page' ) ) :
-function lonelinesshub_admin_default_page() {
-  return '/news-feed';
-}
-//add_filter('login_redirect', 'lonelinesshub_admin_default_page');
-endif;
 
 /**
  * Redirect users after logout
@@ -82,4 +73,24 @@ add_filter( 'logout_redirect', 'lonelinesshub_logout_redirect' );
 endif;
 
 
+/**
+ * Redirect after successful login
+ */
+if ( ! function_exists( 'lonelinesshub_login_redirect' ) ) :
+function lonelinesshub_login_redirect( $redirect_to, $request, $user ) {
+    //is there a user to check?
+    global $user;
+    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
 
+        if ( in_array( 'administrator', $user->roles ) ) {
+            // redirect them to the default place
+            return home_url('/wp-admin');
+        } else {
+            return home_url('/news-feed');
+        }
+    } else {
+        return $redirect_to;
+    }
+}
+add_filter( 'login_redirect', 'lonelinesshub_login_redirect', 99, 99 );
+endif;
