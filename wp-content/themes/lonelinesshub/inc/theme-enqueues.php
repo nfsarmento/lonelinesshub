@@ -53,3 +53,12 @@ function lonelinesshub_theme_child_scripts_styles()
   wp_enqueue_script( 'lonelinesshub-js', get_stylesheet_directory_uri().'/assets/js/custom.js', '', '1.0.2' );
 }
 add_action( 'wp_enqueue_scripts', 'lonelinesshub_theme_child_scripts_styles', 9999 );
+
+
+/**
+ * Enqueue admin scripts and styles.
+ */
+function lonelinesshub_admin_theme_style() {
+    wp_enqueue_style('my-admin-style', get_stylesheet_directory_uri() . '/assets/css/admin-style.css');
+}
+add_action('admin_enqueue_scripts', 'lonelinesshub_admin_theme_style');

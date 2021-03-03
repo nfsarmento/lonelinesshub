@@ -10,8 +10,8 @@ defined( 'ABSPATH' ) || exit;
 
 
 /*
- * Register CPT resources 
- * 
+ * Register CPT resources
+ *
  */
 function lonelinesshub_register_my_cpts() {
 
@@ -53,22 +53,22 @@ function lonelinesshub_register_my_cpts() {
 add_action( 'init', 'lonelinesshub_register_my_cpts' );
 
 /*
- * Register CPT resources tax
- * 
+ * Register CPT resources age tax
+ *
  */
-function lonelinesshub_taxes_resources_categories() {
+function lonelinesshub_tax_resources_age_categories() {
 
 	/**
-	 * Taxonomy: Resources categories.
+	 * Taxonomy: Resources age categories.
 	 */
 
 	$labels = [
-		"name" => __( "Resources categories", "custom-post-type-ui" ),
-		"singular_name" => __( "Resource category", "custom-post-type-ui" ),
+		"name" => __( "Resources age categories", "custom-post-type-ui" ),
+		"singular_name" => __( "Resource age category", "custom-post-type-ui" ),
 	];
 
 	$args = [
-		"label" => __( "Resources categories", "custom-post-type-ui" ),
+		"label" => __( "Resources age categories", "custom-post-type-ui" ),
 		"labels" => $labels,
 		"public" => true,
 		"publicly_queryable" => true,
@@ -77,13 +77,50 @@ function lonelinesshub_taxes_resources_categories() {
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"query_var" => true,
-		"rewrite" => [ 'slug' => 'resources_categories', 'with_front' => true, ],
+		"rewrite" => [ 'slug' => 'resources_age', 'with_front' => true, ],
 		"show_admin_column" => true,
 		"show_in_rest" => true,
-		"rest_base" => "resources_categories",
+		"rest_base" => "resources_age",
 		"rest_controller_class" => "WP_REST_Terms_Controller",
 		"show_in_quick_edit" => true,
 			];
-	register_taxonomy( "resources_categories", [ "resources" ], $args );
+	register_taxonomy( "resources_age", [ "resources" ], $args );
 }
-add_action( 'init', 'lonelinesshub_taxes_resources_categories' );
+add_action( 'init', 'lonelinesshub_tax_resources_age_categories' );
+
+
+/*
+ * Register CPT resources characteristics tax
+ *
+ */
+function lonelinesshub_tax_re_characteristics_categories() {
+
+	/**
+	 * Taxonomy: Resources characteristics categories.
+	 */
+
+	$labels = [
+		"name" => __( "Resources characteristics categories", "custom-post-type-ui" ),
+		"singular_name" => __( "Resource characteristics category", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => __( "Resources characteristics categories", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'resources_characteristics', 'with_front' => true, ],
+		"show_admin_column" => true,
+		"show_in_rest" => true,
+		"rest_base" => "resources_characteristics",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => true,
+			];
+	register_taxonomy( "resources_characteristics", [ "resources" ], $args );
+}
+add_action( 'init', 'lonelinesshub_tax_re_characteristics_categories' );
