@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 /*
  * Register resources sidebar
- * 
+ *
  */
 if ( ! function_exists( 'lonelinesshub_widgets_init' ) ) {
 function lonelinesshub_widgets_init() {
@@ -40,8 +40,8 @@ function lonelinesshub_widgets_init() {
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
-    ) );	
-	
+    ) );
+
 	register_sidebar( array(
         'name' => __( 'Home Sidebar', 'lonelinesshub' ),
         'id' => 'home-cta',
@@ -50,8 +50,8 @@ function lonelinesshub_widgets_init() {
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
-    ) );	
-} 
+    ) );
+}
 }
 add_action( 'widgets_init', 'lonelinesshub_widgets_init' );
 
@@ -112,7 +112,7 @@ function lonelinesshub_posts_custom_column_views( $column_name, $id ){
 
 /*
  * Rename plugin menu admin name
- * 
+ *
  */
 if ( ! function_exists( 'lonelinesshub_renamed_admin_menu_items' ) ) {
 function lonelinesshub_renamed_admin_menu_items() {
@@ -137,8 +137,6 @@ function lonelinesshub_renamed_admin_menu_items() {
 }
 }
 add_action('admin_init', 'lonelinesshub_renamed_admin_menu_items');
-
-
 
 
 /**
@@ -167,3 +165,18 @@ add_action('wp_dashboard_setup', 'lonelinesshub_remove_dashboard_widgets' );
 add_action('wp_user_dashboard_setup', 'remove_dashboard_widgets', 20);
 
 remove_action('welcome_panel', 'wp_welcome_panel');
+
+
+/**
+ * Function to disable Gutenberg editor
+ */
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
+
+/**
+ * Function to add Tag Selection to Custom Post Type
+ */
+function lonelinesshub_reg_tag() {
+     register_taxonomy_for_object_type('post_tag', 'resources');
+}
+add_action('init', 'lonelinesshub_reg_tag');
