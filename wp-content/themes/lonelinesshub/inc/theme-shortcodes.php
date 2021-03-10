@@ -363,3 +363,25 @@ function lonelinesshub_mostviewd_widget_shortcode( $atts ) {
 }
 add_shortcode( 'mostviewdwidget', 'lonelinesshub_mostviewd_widget_shortcode' );
 // @codingStandardsIgnoreEnd
+
+
+/**
+ *
+ * Shortcode to display an action butt
+ * [action-button color="black" title="Download Now" text" url="#"]
+ *
+ */
+// @codingStandardsIgnoreStart
+add_shortcode( 'action-button', 'lonelinesshub_action_button_shortcode' );
+function lonelinesshub_action_button_shortcode( $atts ) {
+       extract( shortcode_atts(
+               array(
+                       'color' => 'black',
+                       'title' => 'Title',
+                       'url' => ''
+               ),
+               $atts
+       ));
+       return '<span class="action-button ' . $color . '-button"><a href="' . $url . '">' . $title . '</a></span>';
+}
+// @codingStandardsIgnoreEnd
