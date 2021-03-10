@@ -44,7 +44,7 @@ function lonelinesshub_register_my_cpts() {
 		"hierarchical" => false,
 		"rewrite" => [ "slug" => "resources", "with_front" => true ],
 		"query_var" => true,
-		"supports" => [ "title", "editor", "thumbnail" ],
+		"supports" => [ "title", "editor", "thumbnail", "author" ],
 	];
 
 	register_post_type( "resources", $args );
