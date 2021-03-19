@@ -55,13 +55,13 @@ function lonelinesshub_cpt_rsource_shortcode( $atts ) {
 			$output .= '</div>';
 			$output .= '<div class="rs-post-content">';
 			$output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
-			$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+			$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. wp_trim_words( get_the_title(), 8, "..." ) .'</p></a>';
 			$output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
 			$output .= '</div>';
 			$output .= '</div>';
 
 		}
-
+		
 		// Close div wrapper around loop
 		$output .= '</div>';
 
@@ -128,7 +128,7 @@ function lonelinesshub_cpt_rsmv_shortcode( $atts ) {
 		$output .= '</div>';
 		$output .= '<div class="rs-post-content">';
 		$output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
-		$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+		$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. wp_trim_words( get_the_title(), 8, "..." ) .'</p></a>';
 		$output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
 		$output .= '</div>';
 		$output .= '</div>';
@@ -199,7 +199,7 @@ function lonelinesshub_cpt_latestblog_shortcode( $atts ) {
 		$output .= '</div>';
 		$output .= '<div class="rs-post-content">';
 		$output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
-		$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+		$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. wp_trim_words( get_the_title(), 8, "..." ) .'</p></a>';
 		$output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
 		$output .= '</div>';
 		$output .= '</div>';
@@ -270,7 +270,7 @@ function lonelinesshub_cpt_latestevents_shortcode( $atts ) {
 			$output .= '</div>';
 			$output .= '<div class="rs-post-content">';
 			$output .= '<p class="rs-post-date">'. get_the_date( 'Y-m-d' ) .'</p>';
-			$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+			$output .= '<a class="rs-post-title-url" href="'. get_permalink() .'"><p class="rs-post-title">'. wp_trim_words( get_the_title(), 8, "..." ) .'</p></a>';
 			$output .= '<a class="rs-post-excerpt-url" href="'. get_permalink() .'"><p class="rs-post-excerpt">'. get_excerpt_trim() .'</p></a>';
 			$output .= '</div>';
 			$output .= '</div>';
@@ -341,7 +341,7 @@ function lonelinesshub_mostviewd_widget_shortcode( $atts ) {
 			$output .= '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . '</a>';
 			$output .= '</div>';
 			$output .= '<div class="rs-post-content-widget">';
-			$output .= '<a class="rs-post-title-url-widget" href="'. get_permalink() .'"><p class="rs-post-title">'. get_the_title() .'</p></a>';
+			$output .= '<a class="rs-post-title-url-widget" href="'. get_permalink() .'"><p class="rs-post-title">'. wp_trim_words( get_the_title(), 8, "..." ) .'</p></a>';
 			$output .= '<p class="rs-post-counter-widget">' .lonelinesshub_get_post_views( get_the_ID() ) .'</p>';
 			//$output .= '<p class="rs-post-date-widget">'. get_the_date( 'Y-m-d' ) .'</p>';
 			$output .= '</div>';
