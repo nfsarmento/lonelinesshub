@@ -10,8 +10,8 @@ defined( 'ABSPATH' ) || exit;
 
 
 /*
- * Register CPT resources
- *
+ * Register CPT resources 
+ * 
  */
 function lonelinesshub_register_my_cpts() {
 
@@ -44,7 +44,7 @@ function lonelinesshub_register_my_cpts() {
 		"hierarchical" => false,
 		"rewrite" => [ "slug" => "resources", "with_front" => true ],
 		"query_var" => true,
-		"supports" => [ "title", "editor", "thumbnail", "author" ],
+		"supports" => [ "title", "editor", "thumbnail", "author", "excerpt" ],
 	];
 
 	register_post_type( "resources", $args );
@@ -54,7 +54,7 @@ add_action( 'init', 'lonelinesshub_register_my_cpts' );
 
 /*
  * Register CPT resources age tax
- *
+ * 
  */
 function lonelinesshub_tax_resources_age_categories() {
 
@@ -77,21 +77,21 @@ function lonelinesshub_tax_resources_age_categories() {
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"query_var" => true,
-		"rewrite" => [ 'slug' => 'resources_age', 'with_front' => true, ],
+		"rewrite" => [ 'slug' => 'resource_age', 'with_front' => true, ],
 		"show_admin_column" => true,
 		"show_in_rest" => true,
-		"rest_base" => "resources_age",
+		"rest_base" => "resource_age",
 		"rest_controller_class" => "WP_REST_Terms_Controller",
 		"show_in_quick_edit" => true,
 			];
-	register_taxonomy( "resources_age", [ "resources" ], $args );
+	register_taxonomy( "resource_age", [ "resources" ], $args );
 }
 add_action( 'init', 'lonelinesshub_tax_resources_age_categories' );
 
 
 /*
  * Register CPT resources characteristics tax
- *
+ * 
  */
 function lonelinesshub_tax_re_characteristics_categories() {
 
