@@ -50,14 +50,12 @@ get_header();
 						<?php } ?>
 								
 						<header class="entry-header">
-							<?php
-                  the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $prefix, '</a></h2>');
-              ?>
+							
+						  <a href="<?php echo esc_url( get_permalink() ); ?>">
+							<h2 class="entry-title"><?php echo the_title(); ?></h2>
+						  </a>
+							
 						</header><!-- .entry-header -->
-					
-						<?php if ((isset($post->post_type) && $post->post_type === 'resources') || (! has_post_format('quote') && is_singular('resources'))) : ?>
-							<?php get_template_part('template-parts/entry-meta'); ?>
-						<?php endif; ?>		
 
 						<div class="entry-content">
 							<?php //the_excerpt(); ?>
