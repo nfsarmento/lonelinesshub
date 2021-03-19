@@ -157,6 +157,28 @@ a.button.small.singup {
   display: none;
 }
 
+.add-event-btn {
+  background: #000;
+  border-radius: 5px;
+  margin-left: 15px !important;
+}
+
+.add-event-btn a {
+  padding: 20px 20px 20px 20px;
+  height: 31px;
+  line-height: 42px;
+  color: #fff !important;
+  font-size: 14px;
+  background-color: unset !important;
+  box-shadow: unset !important;
+  font-weight: bold;
+}
+
+.add-event-btn a:focus {
+  background-color: unset !important;
+  box-shadow: unset !important;
+}
+
 /*Button*/
 .action-button a:link, .action-button a:visited {
   border-radius: 3px;
@@ -166,7 +188,6 @@ a.button.small.singup {
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   -webkit-border-radius: 5px;
   font-size: 14px;
@@ -264,6 +285,10 @@ input#group-document-search {
 .events-community-submit:hover {
   color: #fff !important;
   padding: 16px !important;
+}
+
+.tribe-section.tribe-section-taxonomy {
+  display: none;
 }
 
 a.table-menu-btn.button.tribe-button.tribe-button-tertiary.tribe-button-activate {
@@ -368,6 +393,44 @@ a.header-search-link {
 
 .user-wrap.user-wrap-container.menu-item-has-children {
   margin-top: 5px;
+}
+
+.group-settings .radio.group-invitations,
+.group-settings .radio.group-post-form,
+.group-settings .radio.group-media,
+.group-settings .radio.group-albums,
+.group-settings .radio.group-document {
+  display: none !important;
+}
+
+.sub-menu-inner li#wp-admin-bar-my-account-messages,
+.sub-menu-inner li#wp-admin-bar-my-account-notifications,
+.sub-menu-inner li#wp-admin-bar-my-account-friends,
+.sub-menu-inner li#wp-admin-bar-my-account-groups,
+.sub-menu-inner li#wp-admin-bar-my-account-forums,
+.sub-menu-inner li#wp-admin-bar-my-account-media {
+  display: none;
+}
+
+.extra-profile-fields {
+  margin-top: 10px;
+}
+
+.extra-profile-fields p {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.extra-profile-fields-header {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.bp_group .flex.align-items-center.bp-group-title-wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 600px) {
@@ -508,6 +571,28 @@ a.header-search-link {
 }
 
 /** Posts **/
+.post-type-archive-resources .row-resources {
+  margin-top: 23px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post-type-archive-resources .entry-img, .single .post-related-posts .entry-img {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+  display: block;
+  background: #809ab4;
+  height: 300px;
+}
+
+.post-type-archive-resources .entry-img img {
+  position: relative;
+}
+
 .blog .site-content .bb-grid>* {
   -webkit-box-flex: 50%;
   -ms-flex: 50%;
@@ -596,12 +681,13 @@ a.header-search-link {
   border-bottom: 10px solid #9DD7FC;
   margin-bottom: 20px;
   height: 185px;
+  overflow: hidden;
 }
 
 .rs-post-image img {
   -o-object-fit: cover;
   object-fit: cover;
-  height: 100%;
+  min-height: 100%;
 }
 
 .row-shortcode-cpt a.rs-post-title-url,
@@ -615,8 +701,9 @@ a.rs-post-excerpt-url {
 }
 
 .row-shortcode-cpt p.rs-post-title {
-  font-size: 26px;
-  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 27px;
+  margin-bottom: 18px;
 }
 
 .row-shortcode-cpt p.rs-post-date {
@@ -626,6 +713,11 @@ a.rs-post-excerpt-url {
 
 .single aside#text-8,
 .single aside#text-5 {
+  display: none;
+}
+
+.single-resources .entry-content-wrap figure,
+.single-resources .post-meta-wrapper {
   display: none;
 }
 
