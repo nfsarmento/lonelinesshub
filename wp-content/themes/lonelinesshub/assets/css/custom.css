@@ -680,14 +680,16 @@ a.header-search-link {
 .row-shortcode-cpt .rs-post-image {
   border-bottom: 10px solid #9DD7FC;
   margin-bottom: 20px;
-  height: 185px;
+  height: 302px;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .rs-post-image img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  min-height: 100%;
+    width: 100%; 
+    height: 100%; 	
+-o-object-fit: contain;
+    object-fit: contain;
 }
 
 .row-shortcode-cpt a.rs-post-title-url,
@@ -701,8 +703,8 @@ a.rs-post-excerpt-url {
 }
 
 .row-shortcode-cpt p.rs-post-title {
-  font-size: 21px;
-  line-height: 27px;
+  font-size: 25px;
+  line-height: 32px;
   margin-bottom: 18px;
 }
 
@@ -711,9 +713,19 @@ a.rs-post-excerpt-url {
   margin-bottom: 10px;
 }
 
+.single figure,
+.single .post-related-posts,
+.single .entry-meta,
 .single aside#text-8,
-.single aside#text-5 {
+.single aside#text-5,
+.single div#comments,
+.single a.push-right{
   display: none;
+}
+
+.rs-post-image a:focus {
+  background-color: unset !important;
+  box-shadow: unset !important;
 }
 
 .single-resources .entry-content-wrap figure,
