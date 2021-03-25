@@ -6,5 +6,12 @@
 }
 
 #toplevel_page_buddyboss-platform ul li:last-child {
-  display: none
+  display: none;
+}
+
+
+#toplevel_page_buddyboss-platform ul li:nth-child(5),
+#toplevel_page_buddyboss-platform ul li:nth-child(6),
+#toplevel_page_buddyboss-platform ul li:nth-child(8){
+  display: none;
 }
