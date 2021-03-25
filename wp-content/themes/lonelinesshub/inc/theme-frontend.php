@@ -32,7 +32,7 @@ jQuery( document ).ready( function($){
 </script>
 <style>
 .register-section-logo.private-on-div {
-	background-image: url(/wp-content/themes/lonelinesshub/assets/img/hub-logo.png) !important;
+	background-image: url(/wp-content/uploads/2021/03/tackling_lonliness_logo.svg) !important;
 	width: 320px !important;
 	background-size: 310px !important;
 	height: 150px;
@@ -62,7 +62,7 @@ jQuery( document ).ready( function($){
  */
 function lonelinesshub_post_thumbnail_fb( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
   if ( empty( $html ) ) {
-    return '<img src="' . get_stylesheet_directory_uri() . '/assets/img/post-fallback-image.png" width="1000px" height="1000px" class="post-fallback-image" />';
+    return '<img src="' . get_stylesheet_directory_uri() . '/assets/img/postfallback-image.png" width="1000px" height="1000px" class="post-fallback-image" />';
   }
   return $html;
 }
@@ -77,13 +77,19 @@ add_filter( 'post_thumbnail_html', 'lonelinesshub_post_thumbnail_fb', 20, 5 );
  */
 function lonelinesshub_text_strings( $translated_text, $text, $domain ) {
 	switch ( $translated_text ) {
+			
 		case 'Invite non-members to create an account. They will receive an email with a link to register.' :
 			$translated_text = __( 'Invite non-members to join the Hub community. They will receive an email with a link to register. PLEASE NOTE: while we are in pilot phase of the Hub, invites will be held by our moderator, and sending will be delayed. You will be notified when invites to non-members are sent', 'lonelinesshub' );
-			break;
+			break;	
+			
+		case 'Public' :
+			$translated_text = __( 'All Hub members' );
+			break;				
+			
 	}
 	return $translated_text;
 }
-add_filter( 'gettext', 'lonelinesshub_text_strings', 20, 3 );
+add_filter( 'gettext', 'lonelinesshub_text_strings', 20, 9999 );
 
 /**
  * Add extra profile fields to members landing page
