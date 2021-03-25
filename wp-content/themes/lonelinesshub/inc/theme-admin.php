@@ -181,3 +181,24 @@ function lonelinesshub_reg_tag() {
 add_action('init', 'lonelinesshub_reg_tag');
 
 
+/**
+ * E-mail notification if new WordPress user account is pending
+ */
+function lonelinesshub_email_notification_function( $user_id, $user_login, $user_password, $user_email, $usermeta ) {
+    // Send the email notification.
+
+	$to = 'nuno@nuno-sarmento.com';
+
+	$body = 'New user on pending signups list';
+
+	$headers = array(
+		 'Content-type: text/html',
+		 'Cc: Adele Hunt<adele@campaigntoendloneliness.org.uk>',
+	);
+	
+	wp_mail( $to, $user_login . ' has just registered', $body, $headers ); 
+	
+}
+add_action( 'bp_core_signup_user', 'lonelinesshub_email_notification_function', 10, 5 );
+
+
