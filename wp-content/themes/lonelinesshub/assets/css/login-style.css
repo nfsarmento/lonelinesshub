@@ -1,9 +1,9 @@
 .login h1 {
-  background-image:url(/wp-content/uploads/2021/03/tackling_lonliness_logo.svg) !important;
+/*   background-image:url(/wp-content/uploads/2021/03/tackling_lonliness_logo.svg) !important;
   width: 320px !important;
   background-size: 310px !important;
   height: 150px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .login h1 span{
@@ -30,4 +30,9 @@ p#backtoblog {
 
 body.login #privacy-modal h1 {
     display: none !important;
+}
+
+
+.editfield.field_3.field_nickname.field_order_0.required-field.visibility-public.field_type_textbox {
+    display: block;
 }
