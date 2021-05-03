@@ -50,7 +50,7 @@ function lonelinesshub_theme_child_scripts_styles()
   wp_enqueue_style( 'lonelinesshub-css', get_stylesheet_directory_uri().'/assets/css/custom.css', '', '1.0.3' );
 
   // Javascript
-  wp_enqueue_script( 'lonelinesshub-js', get_stylesheet_directory_uri().'/assets/js/custom.js', '', '1.0.2' );
+  wp_enqueue_script( 'lonelinesshub-js', get_stylesheet_directory_uri().'/assets/js/custom.js', '', '1.1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'lonelinesshub_theme_child_scripts_styles', 9999 );
 
