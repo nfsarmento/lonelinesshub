@@ -28,6 +28,27 @@ if ( 'masonry' === $blog_type ) {
 }
 ?>
 
+<!-- <div class="container">
+	
+	<div class="row">
+		
+		<div class="col-12">
+			
+			<h1>
+				Blog
+			</h1>
+
+			<p>
+				This is a public area of the Tackling Loneliness Hub. If you are a Hub member, sign in to access the private Connect, Collaborate, and Event areas.
+			</p>
+			
+		</div>
+		
+	</div>
+	
+</div> -->
+
+
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
