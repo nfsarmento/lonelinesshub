@@ -46,7 +46,7 @@ $user = wp_get_current_user();
     }
 
 }
-add_action('admin_menu', 'tacklinglonelinesshub_remove_menus');
+//add_action('admin_menu', 'tacklinglonelinesshub_remove_menus');
 endif;
 
 
@@ -72,5 +72,5 @@ function tacklinglonelinesshub_and_remove_menus(){
     remove_menu_page( 'plugins.php' );
   }
 }
-add_action( 'admin_menu', 'tacklinglonelinesshub_and_remove_menus', 9999 );
+//add_action( 'admin_menu', 'tacklinglonelinesshub_and_remove_menus', 9999 );
 endif;
