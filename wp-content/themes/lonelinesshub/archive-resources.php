@@ -10,13 +10,11 @@
 get_header();
 
 ?>
-
 <?php if (is_active_sidebar('sidebar-resources')) : ?>
     <div id="secondary" class="widget-area" role="complementary">
     <?php dynamic_sidebar('sidebar-resources'); ?>
     </div>
 <?php endif; ?>
-
 
 <?php if (have_posts()) : ?>
 
