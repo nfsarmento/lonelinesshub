@@ -20,8 +20,8 @@ function lonelinesshub_widgets_init() {
         'description' => __( 'This main sidebar appears on the left on posts resources landing page', 'lonelinesshub' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
     ) );
     register_sidebar( array(
         'name' => __( 'Resources Single Sidebar', 'lonelinesshub' ),
@@ -29,8 +29,8 @@ function lonelinesshub_widgets_init() {
         'description' => __( 'This main sidebar appears on the left on posts resources single page', 'lonelinesshub' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
     ) );
     register_sidebar( array(
         'name' => __( 'Login Sidebar', 'lonelinesshub' ),
@@ -38,8 +38,8 @@ function lonelinesshub_widgets_init() {
         'description' => __( 'This main sidebar appears on the home page for the login widget', 'lonelinesshub' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
     ) );	
 	
 	register_sidebar( array(
@@ -48,8 +48,8 @@ function lonelinesshub_widgets_init() {
         'description' => __( 'This main sidebar appears on the home for the call to action', 'lonelinesshub' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
     ) );	
 } 
 }
@@ -182,7 +182,7 @@ add_action('init', 'lonelinesshub_reg_tag');
 
 
 /**
- * E-mail notification if new WordPress user account is pending
+ * Admin E-mail notification if new WordPress user account is pending
  */
 function lonelinesshub_email_notification_function( $user_id, $user_login, $user_password, $user_email, $usermeta ) {
     // Send the email notification.
@@ -202,3 +202,24 @@ function lonelinesshub_email_notification_function( $user_id, $user_login, $user
 add_action( 'bp_core_signup_user', 'lonelinesshub_email_notification_function', 10, 5 );
 
 
+
+
+/**
+ * User E-mail notification if new WordPress user account is pending
+ */
+function lonelinesshub_user_email_notification_function( $user_id, $user_login, $user_password, $user_email, $usermeta ) {
+    // Send the email notification.
+
+	$to = 'nuno@nuno-sarmento.com';
+
+	$body = 'Your user has been approved';
+
+	$headers = array(
+		 'Content-type: text/html',
+		 'Cc: Adele Hunt<adele@campaigntoendloneliness.org.uk>',
+	);
+	
+	wp_mail( $to, $user_login . ' has just registered', $body, $headers ); 
+	
+}
+//add_action( 'bp_core_activated_user', 'lonelinesshub_user_email_notification_function', 10, 5 );
