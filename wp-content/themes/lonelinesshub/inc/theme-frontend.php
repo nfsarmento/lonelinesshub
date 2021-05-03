@@ -22,12 +22,43 @@ function get_excerpt_trim($num_words='8', $more=' ...'){
  * Add script on footer for website rgistration form
  *
 */
-add_action('wp_footer', 'lonelinesshub_function_name', 9999);
+add_action('wp_footer', 'lonelinesshub_function_name', 999999999999);
 function lonelinesshub_function_name(){
 ?>
 <script>
 jQuery( document ).ready( function($){
 	$( ".register-section-logo.private-on-div" ).empty();
+
+	window.addEventListener('load', function () {
+		$(".mce-container-body").contents().find("[teabindex='-1']").each(function() {
+			$(this).removeAttr("tabindex");
+		});	
+		$('.bp-suggestions').attr('aria-label', 'Comment');
+		$('.button.like-count').attr('aria-label', 'Comment');
+		$(".widget-content .item-avatar a .online").append('<div class="userisonline"><span>Online</span></div>');
+		$(".emojionearea-search").prepend('<label class="emolisearch">Search</label>');
+		$("#bp-activity-privacy option:nth-child(1)").attr('aria-label', 'All Hub members');
+		$("#bp-activity-privacy option:nth-child(2)").attr('aria-label', 'All Members');
+		$("#bp-activity-privacy option:nth-child(3)").attr('aria-label', 'My Connections');
+		$("#bp-activity-privacy option:nth-child(4)").attr('aria-label', 'Only Me');	
+		$("#whats-new-post-in-box option:nth-child(1)").attr('aria-label', 'Post in: Profile');
+		$("#whats-new-post-in-box option:nth-child(2)").attr('aria-label', 'Post in: Group');
+		$('.bb-model-header a').attr('aria-label', 'Close dialog');	
+	    $('.activity-content img:not([alt])').attr('alt', 'Activity image');			
+		$('a').each(function(){
+			$(this).attr('title',$(this).text());
+		});	
+		$(".load-more").click(function() {
+			$('a').each(function(){
+				$(this).attr('title',$(this).text());
+			});	
+		});		
+			
+	// Prepend label on "EVENT COST" - add event page
+	$(".registration .entry-content #register-page").prepend('<h2 class="event-date-label" style="margin-top:30px;font-size:26px;color: #000000;font-style: italic;text-transform:none;">These fields are case sensitive</h2>');		
+			
+	})	
+	
 });
 </script>
 <style>
@@ -79,7 +110,7 @@ function lonelinesshub_text_strings( $translated_text, $text, $domain ) {
 	switch ( $translated_text ) {
 			
 		case 'Invite non-members to create an account. They will receive an email with a link to register.' :
-			$translated_text = __( 'Invite non-members to join the Hub community. They will receive an email with a link to register. PLEASE NOTE: while we are in pilot phase of the Hub, invites will be held by our moderator, and sending will be delayed. You will be notified when invites to non-members are sent', 'lonelinesshub' );
+			$translated_text = __( 'Invite non-members by using the ‘+’ cirlce button to join the Hub community. They will receive an email with a link to register. PLEASE NOTE: while we are in pilot phase of the Hub, invites will be held by our moderator, and sending will be delayed. You will be notified when invites to non-members are sent. ', 'lonelinesshub' );
 			break;	
 			
 		case 'Public' :
@@ -110,3 +141,13 @@ function lonelinesshub_extra_fields_members_directory() {
 
 }
 add_action( 'bp_directory_members_item', 'lonelinesshub_extra_fields_members_directory', 99 );
+
+/**
+ * Check blog landing page
+ *
+ */
+function is_blog () {
+        global  $post;
+        $posttype = get_post_type($post );
+        return ( ((is_archive()) || (is_home()) ) && ( $posttype == 'post')  ) ? true : false ;
+}
