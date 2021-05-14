@@ -18,6 +18,7 @@ https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 * 6 - Posts
 * 7 - Footer
 * 8 - Custom grid
+* 9 - Buttons
 *
 *
 *
@@ -56,15 +57,6 @@ body {
   color: #000000 !important;
 }
 
-a.button.small.outline.signin-button.link {
-  background: #000000;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  padding: 10px 20px 10px 20px;
-}
-
 .site-content a {
   text-decoration: underline !important;
   text-underline-position: under;
@@ -73,17 +65,6 @@ a.button.small.outline.signin-button.link {
 .site-content i {
   text-decoration: none !important;
 }
-
-.site-content a:focus,
-.site-content input[type="search"]:focus,
-.site-content input[type="search"]:focus {
-  outline: 3px solid transparent !important;
-  background-color: #fd0 !important;
-  -webkit-box-shadow: 0 -2px #fd0, 0 4px #0b0c0c !important;
-  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c !important;
-  text-decoration: none !important;
-}
-
 .widget-title {
   font-size: 0.85rem;
 }
@@ -105,7 +86,7 @@ a.button.small.outline.signin-button.link {
 }
 
 .site-content {
-  background: #f9f9f9;
+  background: #EEF6F6;
 }
 
 .widget {
@@ -200,54 +181,6 @@ a.button.small.singup {
   display: none;
 }
 
-.add-event-btn {
-  background: #000;
-  border-radius: 5px;
-  margin-left: 15px !important;
-}
-
-.add-event-btn a {
-  padding: 20px 20px 20px 20px;
-  height: 31px;
-  line-height: 42px;
-  color: #fff !important;
-  font-size: 14px;
-  background-color: unset !important;
-  -webkit-box-shadow: unset !important;
-  box-shadow: unset !important;
-  font-weight: bold;
-}
-
-.add-event-btn a:focus {
-  background-color: unset !important;
-  -webkit-box-shadow: unset !important;
-  box-shadow: unset !important;
-}
-
-/*Button*/
-.action-button a:link, .action-button a:visited {
-  border-radius: 3px;
-  display: inline-block;
-  margin: 0 10px 20px 0;
-  -moz-border-radius: 5px;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-border-radius: 5px;
-  font-size: 14px;
-}
-
-.black-button a:link, .black-button a:visited {
-  background-color: #000;
-  color: #FFF;
-}
-
-.black-button a:hover {
-  background-color: #000;
-  color: #FFF;
-}
-
 /** NavBar **/
 .header-aside-inner .bb-header-buttons {
   padding: 0;
@@ -289,11 +222,23 @@ nav#object-nav .selected>a,
 }
 
 /** Plugins **/
+
 input#post {
+  color: #01608D !important;
+  padding: 16px !important;
+  background: #ffffff !important;
+  border: 2px solid #01608D !important;
+  line-height: 7px !important;
+  
+}
+
+input#post:hover {
   color: #ffffff !important;
   padding: 16px !important;
-  background-color: #000000 !important;
+  background-color: #0176AD !important;
+  border: 2px solid #0176AD !important;
   line-height: 7px !important;
+  box-shadow:unset;
 }
 
 input {
@@ -310,13 +255,6 @@ input {
   color: #fff !important;
 }
 
-.tribe-button.tribe-button-secondary,
-.tribe-button.tribe-button-primary.add-new {
-  color: #ffffff !important;
-  padding: 16px !important;
-  background-color: #000000 !important;
-}
-
 .tribe-community-events-content .tribe-nav .my-events-display-options a {
   padding: 15px 20px !important;
 }
@@ -324,12 +262,6 @@ input {
 .tribe-search-form input[type="search"],
 input#group-document-search {
   text-decoration: none !important;
-}
-
-.tribe-button.tribe-button-secondary:hover,
-.events-community-submit:hover {
-  color: #fff !important;
-  padding: 16px !important;
 }
 
 .tribe-section.tribe-section-taxonomy {
@@ -358,10 +290,6 @@ a.table-menu-btn.button.tribe-button.tribe-button-tertiary.tribe-button-activate
   padding-top: 40px;
 }
 
-button.tribe-common-c-btn.tribe-events-c-search__button {
-  background: #000 !important;
-}
-
 #tribe-events-footer ul.tribe-events-sub-nav li.tribe-events-nav-next a:after,
 #tribe-events-footer ul.tribe-events-sub-nav li.tribe-events-nav-previous a:before {
   content: '';
@@ -371,11 +299,62 @@ button.tribe-common-c-btn.tribe-events-c-search__button {
   color: #000000 !important;
 }
 
+.tribe-events-widget-events-list {
+    background: #fff;
+    padding: 20px !important;
+    border-bottom: 5px solid #9DD7FC !important;
+}
+
+.tribe-events-widget-events-list h2.tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
+    font-weight: 600;
+}
+
+.tribe-events-widget-events-list .tribe-events-widget-events-list__view-more.tribe-common-b1.tribe-common-b2--min-medium {
+    text-align: center;
+}
+
+.tribe-events-widget .tribe-events-widget-events-list__view-more-link {
+    color: #000000 !important;
+    text-transform: capitalize !important;
+}
+
 .tribe-community-events .req {
   color: #000000 !important;
   font-size: 14px !important;
   font-weight: 700 !important;
 }
+
+.tribe-common .tribe-common-c-svgicon {
+    color: #ffffff !important;
+}
+
+.tribe-common .tribe-common-c-svgicon:hover {
+    color: #01608D !important;
+}
+
+.tribe-community-events {
+    border: 1px solid #EEF6F6 !important;
+    box-sizing: border-box;
+    color: #64686c;
+    font-size: 100%;
+    padding: 40px 10px;
+    background: #EEF6F6 !important;
+}
+
+header.tribe-events-header.tribe-events-header--has-event-search {
+    margin-top: 20px;
+    padding-top: 300px;
+    top: 20px;
+}
+
+.tribe-events-before-html {
+    padding-bottom: 40px !important;
+}
+
+.tribe-events-c-view-selector {
+    display: none;
+}
+
 
 /* Most Viewd shortcode */
 .mostviewed-widget {
@@ -411,11 +390,22 @@ div#whats-new-toolbar * {
   color: #000000;
 }
 
+.bs-group-cover.only-grid-view a:focus{
+    outline-style: solid !important;
+    outline-width: 1px !important;
+    outline-color: #ffe900 !important;
+    border: 2px solid #ffe900;
+}
+
+span.count, .notification-wrap span.count {
+    background-color: #FBB853 !important;
+    color: #000 !important;
+}
+
 .bb-icon-connection-remove:before,
 .bb-icon-mail-small:before,
 .flex.align-items-top.member-social *,
-.followers-wrap, .following-wrap,
-#buddypress input#aw-whats-new-reset {
+.followers-wrap, .following-wrap {
   color: #000 !important;
 }
 
@@ -423,6 +413,11 @@ div#whats-new-toolbar * {
 .buddypress-wrap .bp-navs li.dynamic a .count {
   background: #000000;
   font-size: 12px;
+}
+
+.more-block {
+    text-transform: initial;
+    font-size: 14px;
 }
 
 .activity-list .activity-item .activity-header,
@@ -511,15 +506,10 @@ input.text-button {
   color: #fff !important;
 }
 
-#buddypress input#aw-whats-new-reset {
-  color: #fff !important;
-}
-
 .site-content i {
   text-decoration: none !important;
 }
 
-a.button.full.btn-new-topic,
 a.send-message,
 div#user_switching_switch_to a {
   color: #fff !important;
@@ -553,22 +543,6 @@ div#user_switching_switch_to a {
 .bb-icon-folder-stacked:before {
   content: '\e8e1';
   color: #fff;
-}
-
-a#bp-add-document,
-a#bb-create-folder,
-a#bp-add-media,
-a.button.outline,
-a.push-right.button.outline.small {
-  background: #000 !important;
-  color: #fff !important;
-}
-
-button.ac-reply-cancel {
-  background: #000 !important;
-  color: #fff !important;
-  height: 32px;
-  text-decoration: underline !important;
 }
 
 .userisonline {
@@ -687,12 +661,6 @@ ul.medium-editor-toolbar-actions .medium-editor-action-pre b:before,
   color: #000000 !important;
 }
 
-.bb-cancel-report-content.button {
-  background: #000 !important;
-  color: #fff !important;
-  width: 120px !important;
-}
-
 .report-submit.button {
   text-decoration: underline !important;
 }
@@ -705,6 +673,20 @@ ul.medium-editor-toolbar-actions .medium-editor-action-pre b:before,
 
 .dashicons-no-alt:before {
   color: #000 !important;
+}
+
+.bp-group-title-wrap h1 {
+    margin-left: -46px !important;
+    padding-left: 0 !important;
+}
+
+.widget.widget_bp_profile_completion_widget .profile_completion_wrap .pc_detailed_progress_wrap .single_section_wrap.progress_not_started .progress .completed_staus {
+    border-color: #B30900 !important;
+    color: #B30900 !important;
+}
+
+.buddypress-wrap .grid-filters {
+    display: none !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -729,7 +711,7 @@ ul.medium-editor-toolbar-actions .medium-editor-action-pre b:before,
 }
 
 .home h1 {
-  font-size: 60px;
+  font-size: 32px;
   margin-bottom: 50px;
   line-height: 70px;
   margin-left: 8px;
@@ -843,7 +825,7 @@ ul.medium-editor-toolbar-actions .medium-editor-action-pre b:before,
 
 @media only screen and (max-width: 600px) {
   .home h1 {
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 20px;
     line-height: 50px;
     margin-left: 8px;
@@ -951,7 +933,8 @@ ul.medium-editor-toolbar-actions .medium-editor-action-pre b:before,
 }
 
 .post-type-archive-resources h2.entry-title {
-  font-size: 20px;
+    font-size: 24px;
+    line-height: 33px;
   margin-top: 25px;
 }
 
@@ -1093,7 +1076,7 @@ img.alignnone.size-full.wp-image-241 {
   }
 }
 
-/* ==== GRID SYSTEM ==== */
+/* ==== 8 GRID SYSTEM ==== */
 .container {
   /*   width: 90%;
   margin-left: auto;
@@ -1253,4 +1236,167 @@ img.alignnone.size-full.wp-image-241 {
     width: 75%;
     max-width: 60rem;
   } */
+}
+
+/* ==== 9 Buttons ==== */
+.action-button a:link, .action-button a:visited {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 10px 20px 0;
+  -moz-border-radius: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-border-radius: 5px;
+  font-size: 14px;
+}
+
+.black-button a:link, .black-button a:visited, .black-button a:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+a.button.small.outline.signin-button.link {
+  background: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 10px 20px 10px 20px;
+}
+
+.add-event-btn a {
+  padding: 14px 20px 14px 20px;
+  background: #ffffff !important;
+  color: #01608D !important;
+  border: 2px solid #01608D !important;
+  border-radius: 5px;
+  margin-left: 0 !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.add-event-btn a:hover {
+  background: #0176AD !important;
+  color: #ffffff !important;
+  border: 2px solid #0176AD !important;
+}
+
+a#bp-add-document,
+a#bb-create-folder,
+a#bp-add-media,
+a.button.outline,
+a.push-right.button.outline.small,
+button.tribe-common-c-btn.tribe-events-c-search__button,
+input#group-creation-create,
+input#send_reply_button,
+input#aw-whats-new-reset,
+input#aw-whats-new-submit,
+.ac-textarea input,
+#buddypress input[type="submit"],
+button.ac-reply-cancel,
+.member-header-actions #send-private-message .send-message,
+.elementor-element.elementor-button-info a.elementor-button,
+#buddypress #item-header-content .groups-meta .report-content,
+#buddypress #item-header-content .groups-meta .join-group,
+#subscription-toggle a.subscription-toggle,
+.bbp-forum-buttons-wrap .btn-new-topic,
+.bp-uploader-window #bp-browse-button,
+.bb-save-settings,
+.tribe-section-image-uploader input#EventImage,
+.tribe-events .tribe-events-c-ical__link,
+button.friendship-button.is_friend.remove.bp-toggle-action-button,
+.bbp_widget_login button#user-submit,
+input#group-creation-previous{
+  background: #ffffff !important;
+  color: #01608D !important;
+  border: 2px solid #01608D !important;	
+  border-radius: 5px !important;
+  text-decoration:underline !important;	
+	
+}
+
+.bbp_widget_login button#user-submit{
+    height: 43px;	
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.tribe-button.tribe-button-secondary,
+.tribe-button.tribe-button-primary.add-new {
+  background: #ffffff !important;
+  color: #01608D !important;
+  border: 2px solid #01608D !important;	
+  padding: 16px !important;
+
+}
+
+a#bp-add-document:hover,
+a#bb-create-folder:hover,
+a#bp-add-media:hover,
+a.button.outline:hover,
+a.push-right.button.outline.small:hover,
+button.tribe-common-c-btn.tribe-events-c-search__button:hover,
+input#group-creation-create:hover,
+input#send_reply_button:hover,
+input#aw-whats-new-reset:hover,
+input#aw-whats-new-submit:hover,
+.ac-textarea input:hover,
+#buddypress input[type="submit"]:hover,
+button.ac-reply-cancel:hover,
+.tribe-button.tribe-button-secondary:hover,
+.tribe-button.tribe-button-primary.add-new:hover,
+.member-header-actions #send-private-message .send-message:hover,
+.elementor-element.elementor-button-info a.elementor-button:hover,
+#buddypress #item-header-content .groups-meta .report-content:hover,
+#buddypress #item-header-content .groups-meta .join-group:hover,
+#subscription-toggle a.subscription-toggle:hover,
+.bbp-forum-buttons-wrap .btn-new-topic:hover,
+.bp-uploader-window #bp-browse-button:hover,
+.bb-save-settings:hover,
+.tribe-section-image-uploader input#EventImage:hover,
+.tribe-events .tribe-events-c-ical__link:hover,
+button.friendship-button.is_friend.remove.bp-toggle-action-button:hover,
+.bbp_widget_login button#user-submit:hover,
+input#group-creation-previous:hover{
+  background: #0176AD !important;
+  color: #ffffff !important;
+  border: 2px solid #0176AD !important;
+  box-shadow: unset !important;
+}
+
+
+.bb-cancel-report-content.button {
+  background: #ffffff !important;
+  color: #01608D !important;
+  border: 2px solid #01608D !important;
+  width: 120px !important;
+  border-radius: 5px !important;
+}
+
+button.report-submit.button {
+  border-radius: 5px !important;
+}
+
+.bb-cancel-report-content.button:hover {
+  background: #0176AD !important;
+  color: #ffffff !important;
+  border: 2px solid #0176AD !important;
+  width: 120px !important;	
+}
+
+button.ac-reply-cancel {
+  background: #ffffff !important;
+  color: #01608D !important;
+  border: 2px solid #01608D !important;
+  border-radius: 5px !important;
+  height: 32px;
+  text-decoration: underline !important;
+}
+
+button.ac-reply-cancel:hover {
+  background: #0176AD !important;
+  color: #ffffff !important;
+  border: 2px solid #0176AD !important;
 }
