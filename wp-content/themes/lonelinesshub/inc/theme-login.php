@@ -16,6 +16,7 @@ if ( ! function_exists( 'lonelinesshub_login_custom_style' ) ) {
 add_action( 'login_enqueue_scripts', 'lonelinesshub_login_custom_style' );
 function lonelinesshub_login_custom_style() {
     wp_enqueue_style( 'login-custom-style', get_stylesheet_directory_uri(). '/assets/css/login-style.css', array('login') );
+	wp_enqueue_script( 'login-custom-script', get_stylesheet_directory_uri().'/assets/js/login-script.js');
 }
 }
 
