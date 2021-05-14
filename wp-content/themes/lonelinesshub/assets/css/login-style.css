@@ -15,8 +15,18 @@ body{
 }
 
 .wp-core-ui .button-primary {
-    background: #000 !important;
-    border-color: #000 !important;
+  background: #0176AD !important;
+  color: #ffffff !important;
+  border: 2px solid #0176AD !important;
+  border-radius: 5px !important;
+  text-decoration:underline !important;	
+}
+
+.wp-core-ui .button-primary:hover{
+  background: #ffffff !important;
+  color: #01608D !important;
+  border: 2px solid #01608D !important;
+  box-shadow: unset !important;	
 }
 
 a.privacy-policy-link {
