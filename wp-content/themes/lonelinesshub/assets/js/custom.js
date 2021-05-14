@@ -5,9 +5,6 @@ jQuery( document ).ready( function($){
 	$('#header-notifications-dropdown-elem .notification-link').append('<span class="notification-icon">Notifications<span>');
 	$(".logged-in .bbp_widget_login h3").html('You are logged in');
 
-	(function($) {
-		$(".tribe-events-c-events-bar__search-form").append('<div class="add-event-btn"><a href="/add-event/"> Add Event</a></div>');
-	})( jQuery );
 
   $('.post-type-archive-resources').removeClass('bb-grid');
 
@@ -40,7 +37,7 @@ jQuery( document ).ready( function($){
 	$(".emojionearea-search").prepend('<label class="emolisearch">Search</label>');
 
 	// Prepend label on invitation forms
-	$("#bp-group-invite-content").prepend('<label id="invitetextlabelid" class="invitetextlabelclass" style="font-size:14px;    margin-left:24px;">Customize the message of your invite.</label>');
+	$("#bp-group-invite-content").prepend('<label id="invitetextlabelid" class="invitetextlabelclass" style="font-size:16px;margin-left:24px;margin-top:10px">Write below a custom message for your invite.</label>');
 
 	// Add alt text to avatar images
 	$('.item-avatar img[alt=""]').attr('alt', 'User image');
