@@ -28,7 +28,6 @@ function lonelinesshub_function_name(){
 <script>
 jQuery( document ).ready( function($){
 	$( ".register-section-logo.private-on-div" ).empty();
-
 	window.addEventListener('load', function () {
 		$(".mce-container-body").contents().find("[teabindex='-1']").each(function() {
 			$(this).removeAttr("tabindex");
@@ -54,11 +53,12 @@ jQuery( document ).ready( function($){
 			});	
 		});		
 			
-	// Prepend label on "EVENT COST" - add event page
-	$(".registration .entry-content #register-page").prepend('<h2 class="event-date-label" style="margin-top:30px;font-size:26px;color: #000000;font-style: italic;text-transform:none;">These fields are case sensitive</h2>');		
-			
-	})	
-	
+		// Prepend label on "EVENT COST" - add event page
+		$(".registration .entry-content #register-page").prepend('<h2 class="event-date-label" style="margin-top:30px;font-size:26px;color: #000000;font-style: italic;text-transform:none;">These fields are case sensitive</h2>');		
+		
+	   $(".registration .signup_password").prepend('<div class="password-policy"><br><h4 style="margin-bottom:15px;font-size:22px;">Password policy:</h4><span style="font-size: 16px;">- Be at least 8 eight characters long</span><br><span style="font-size: 16px;">- Contain special characters e.g. !£$/</span><br><span style="font-size: 16px;">- Contain upper and lower case characters</span><br><span style="font-size: 16px;">- Contain a number</span><br><br></div>');
+		
+	})		
 });
 </script>
 <style>
